@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <h1 style="color: #fff; font-family: 'Courier New', Courier, monospace;">Jigar sayt</h1>
+            </div>
+            <ul class="header-ul">
+                <li><a href="https://www.youtube.com/shorts/KUtSGR_Eyf4">You Tube</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div class="content">
+            <img style="width: 200px;" class="profile-image" src="./photo.jpg" alt="">
+            <div>
+                <h1>Fozilxon</h1>
+                <p><i>Years old: 15</i></p>
+                <p>Full name: Otaxonov Fozilxon</p>
+                <button id="showImagesButton">Show Images</button>
+            </div>
+            <div id="imagesContainer" class="images-container" style="display: none;">
+                <img src="./image1.jpg" alt="Image 1">
+                <img src="./image2.jpg" alt="Image 2">
+                <img src="./image3.png" alt="Image 3">
+                <img src="./image4.jpg" alt="Image 4">
+                <img src="./image5.jpg" alt="Image 5">
+                <img src="./image6.jpg" alt="Image 6">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('showImagesButton').onclick = function () {
+            const imagesContainer = document.getElementById('imagesContainer');
+            if (imagesContainer.style.display === 'none') {
+                imagesContainer.style.display = 'flex';
+                setTimeout(() => {
+                    imagesContainer.style.opacity = 1;
+                }, 10);
+            } else {
+                imagesContainer.style.opacity = 0;
+                setTimeout(() => {
+                    imagesContainer.style.display = 'none';
+                }, 300);
+            }
+        }
+    </script>
+</body>
+
+</html>
